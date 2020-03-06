@@ -1,0 +1,108 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - inform
+  - search_provider
+  - create_sales_order
+  - create_purchase_order
+  - create_sales_estimation
+  - update_sales_estimation
+  - create_delivery_challan
+  - create_customer
+  - update_customer
+  - update_sales_order
+  - create_sales_invoice
+
+entities:
+  - location
+  - facility_type
+  - task
+  - task_object
+
+actions:
+  - utter_greet
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_ask_location
+  - action_facility_search
+  - utter_create_sales_order
+  - utter_create_purchase_order
+  - utter_create_sales_estimation
+  - utter_update_sales_estimation
+  - utter_create_delivery_challan
+  - utter_create_customer
+  - utter_update_customer
+  - utter_update_sales_order
+  - utter_create_sales_invoice
+
+slots:
+  location:
+    type: text
+  facility_type:
+    type: text 
+  address:
+    type: unfeaturized
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_ask_location:
+     - text: "Tell me the location."
+     - text: "I need your address, enter {facility_type}"
+
+  utter_create_sales_order:
+    - text: "Creating Sales Order."
+
+  utter_create_purchase_order:
+    - text: "Creating Purchase Order."
+
+  utter_create_sales_estimation:
+    - text: "Creating Sales Estimation"
+
+  utter_update_sales_estimation:
+    - text: "Updating sales estimation"
+
+  utter_create_delivery_challan:
+    - text: "creating delivery challan"
+
+  utter_create_customer:
+    - text: "creating customer"
+
+  utter_update_customer:
+    - text: "updating customer"
+
+  utter_update_sales_order:
+    - text: "updating sales order"
+
+  utter_create_sales_invoice:
+    - text: "creating sales invoice"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
